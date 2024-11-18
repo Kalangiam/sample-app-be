@@ -29,10 +29,13 @@ const userSchema = new mongoose.Schema({
         required:true,
         message:"Password is required"
     },
-    confirmpassword:{
-        type:String,
-        required:true,
-        message:"confirm-Password is required"
+    resetPasswordToken: {
+        type: String,
+        default: null,
+    },
+    resetPasswordExpiry: {
+        type: Date,
+        default: null,
     },
 },{
     versionKey:false,
